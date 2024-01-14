@@ -4,12 +4,12 @@ My typical TypeScript + Node.js boilerplate for new projects. This is a minimal 
 
 # About
 
-This is my personal TypeScript + Node.js starter project boilerplate. While opinionated for my tooling and configs, you can use it easily as well! You will need to use `pnpm` and `Node.js 18` or above.
+This is my personal TypeScript + Node.js starter project boilerplate. While opinionated for my tooling and configs, you can use it easily as well! You will need to use `pnpm 8.14.1` and `Node 20.11.0` or above.
 
 To get started, run
-`corepack prepare pnpm@latest --activate` and then install all dependencies with `pnpm i`. If you get a peer dependency error for an eslint issue, ignore it.
+`corepack prepare pnpm@latest --activate` and then install all dependencies with `pnpm i`.
 
-To convert to a monorepo, all you need to do is add `pnpm-workspace.yml` and configure it according to pnpm documentation. I also love using Turborepo for monorepo management.
+To convert to a monorepo, all you need to do is add `pnpm-workspace.yml` and configure it according to pnpm documentation.
 
 # Features
 
@@ -17,16 +17,9 @@ To convert to a monorepo, all you need to do is add `pnpm-workspace.yml` and con
 - CodeQL scanning
 - Enforce the use of pnpm
 - Basic absolute path aliases setup
-- Strong and strict TypeScript 5.2+ config
+- Strong and strict TypeScript config
 - Strict and opinionated formatter and linter
 - Competent basic scripts to quickly get started
-
-# Tooling
-
-- PNPM 8+
-- Node.js 18+
-- TypeScript 5.2+
-- ESLint + Prettier
 
 # Scripts
 

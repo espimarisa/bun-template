@@ -1,3 +1,6 @@
+// Tests relative imports in a nasty way
+import { readIfCuteAgain } from "$src/importTest.js";
+
 // Read if cute
 function readIfCute(cute = true) {
   if (cute) {
@@ -10,3 +13,4 @@ function readIfCute(cute = true) {
 }
 
 readIfCute();
+readIfCuteAgain();
