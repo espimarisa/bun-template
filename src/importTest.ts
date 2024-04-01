@@ -1,3 +1,3 @@
-export function readIfCuteAgain() {
-  console.log("Super cute!");
+export function readIfCute() {
+	return "meow!~";
 }

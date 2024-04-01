@@ -1,41 +1,35 @@
 {
-  "name": "@espimarisa/typescript-boilerplate",
-  "version": "0.0.0",
-  "type": "module",
-  "description": "My Bun + TypeScript template.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/espimarisa/bun-template.git"
-  },
-  "homepage": "https://github.com/espimarisa/bun-template#readme",
-  "bugs": {
-    "url": "https://github.com/espimarisa/typescript-boilerplate/issues"
-  },
-  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
-  "license": "zlib",
-  "private": true,
-  "scripts": {
-    "build": "tsc",
-    "check": "tsc --noEmit",
-    "deps:check": "bunx npm-check-updates --target latest",
-    "deps:update": "bunx npm-check-updates --target latest -u",
-    "dev": "NODE_ENV=development bun run --hot ./src/index.ts",
-    "format": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "start": "NODE_ENV=production bun run ./src/index.ts",
-    "test": "bun run check && bun run lint"
-  },
-  "dependencies": {
-    "tslib": "^2.6.2"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.0.12",
-    "eslint": "^8.57.0",
-    "eslint-config-ks": "^5.0.4",
-    "prettier": "^3.2.5",
-    "prettier-plugin-pkg": "^0.18.1",
-    "prettier-plugin-sh": "^0.14.0",
-    "typescript": "^5.4.3"
-  }
+	"name": "@espimarisa/typescript-boilerplate",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "My Bun + TypeScript template.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/espimarisa/bun-template.git"
+	},
+	"homepage": "https://github.com/espimarisa/bun-template#readme",
+	"bugs": {
+		"url": "https://github.com/espimarisa/typescript-boilerplate/issues"
+	},
+	"author": "Espi Marisa <contact@espi.me> (https://espi.me)",
+	"license": "zlib",
+	"private": true,
+	"scripts": {
+		"build": "tsc",
+		"check": "tsc --noEmit",
+		"dev": "NODE_ENV=development bun run --hot ./src/index.ts",
+		"format": "biome format --write .",
+		"lint": "biome check .",
+		"lint:fix": "biome check --apply .",
+		"start": "NODE_ENV=production bun run ./src/index.ts",
+		"test": "bun run check && bun run lint"
+	},
+	"dependencies": {
+		"tslib": "^2.6.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.6.3",
+		"@types/bun": "^1.0.12",
+		"typescript": "^5.4.3"
+	}
 }
