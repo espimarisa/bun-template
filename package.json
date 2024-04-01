@@ -1,55 +1,41 @@
 {
-  "private": true,
-  "type": "module",
   "name": "@espimarisa/typescript-boilerplate",
-  "version": "0.0.1",
-  "description": "My typical TypeScript + Node.js boilerplate for new projects.",
-  "license": "zlib",
-  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
-  "homepage": "https://github.com/espimarisa/typescript-boilerplate#readme",
-  "packageManager": "pnpm@8.14.1",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "My Bun + TypeScript template.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/espimarisa/typescript-boilerplate.git"
+    "url": "git+https://github.com/espimarisa/bun-template.git"
   },
+  "homepage": "https://github.com/espimarisa/bun-template#readme",
   "bugs": {
     "url": "https://github.com/espimarisa/typescript-boilerplate/issues"
   },
-  "engines": {
-    "node": ">=20.11.0",
-    "pnpm": ">=8.14.1"
-  },
+  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
+  "license": "zlib",
+  "private": true,
   "scripts": {
-    "clean": "rimraf ./dist",
-    "build": "pnpm clean && tsc && tsc-alias",
-    "dev": "cross-env NODE_ENV=development tsx ./src/index.ts",
-    "lint": "prettier --c . && eslint .",
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "deps:check": "bunx npm-check-updates --target latest",
+    "deps:update": "bunx npm-check-updates --target latest -u",
+    "dev": "NODE_ENV=development bun run --hot ./src/index.ts",
     "format": "prettier --write .",
-    "start": "pnpm build && cross-env NODE_ENV=production node --no-warnings ./dist/index.js",
-    "test": "tsc --noEmit"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "NODE_ENV=production bun run ./src/index.ts",
+    "test": "bun run check && bun run lint"
   },
   "dependencies": {
     "tslib": "^2.6.2"
   },
   "devDependencies": {
-    "@espimarisa/eslint-config": "^4.2.3",
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "npm:eslint-plugin-i@2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-security": "^2.1.0",
-    "eslint-plugin-unicorn": "^50.0.1",
-    "prettier": "^3.2.2",
-    "rimraf": "^5.0.5",
-    "tsc-alias": "^1.8.8",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "@types/bun": "^1.0.12",
+    "eslint": "^8.57.0",
+    "eslint-config-ks": "^5.0.4",
+    "prettier": "^3.2.5",
+    "prettier-plugin-pkg": "^0.18.1",
+    "prettier-plugin-sh": "^0.14.0",
+    "typescript": "^5.4.3"
   }
 }
