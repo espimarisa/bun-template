@@ -17,6 +17,8 @@
 	"scripts": {
 		"build": "tsc",
 		"check": "tsc --noEmit",
+		"deps:check": "bunx npm-check-updates --target latest",
+		"deps:update": "bunx npm-check-updates --target latest -u",
 		"dev": "NODE_ENV=development bun run --hot ./src/index.ts",
 		"format": "biome format --write .",
 		"lint": "biome check .",
