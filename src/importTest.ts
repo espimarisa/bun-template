@@ -1,3 +1,3 @@
 export function readIfCute() {
-  return "meow!~";
+	return "meow!~";
 }

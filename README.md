@@ -1,12 +1,12 @@
 # bun-template
 
-This is my Bun + TypeScript template that all my Bun projects pull from.
+This is my Bun template that all my Bun projects pull from.
 
 ## Requirements
 
 [bun][bun], obviously
 
-# License
+## License
 
 [zlib/libpng][license]
 

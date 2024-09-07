@@ -1,39 +1,49 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.6.3/schema.json",
-
-  "files": {
-    "ignore": ["**/node_modules/*", "**/dist/*"],
-    "ignoreUnknown": true
-  },
-  "formatter": {
-    "ignore": ["**/node_modules/*", "**/dist/*"],
-    "enabled": true,
-    "formatWithErrors": true,
-    "lineWidth": 120,
-    "indentStyle": "space"
-  },
-  "linter": {
-    "ignore": ["**/node_modules/*", "**/dist/*"],
-    "enabled": true,
-    "rules": {
-      "all": true,
-      "style": {
-        "useFilenamingConvention": "off",
-        "useNamingConvention": "off",
-        "noParameterProperties": "off"
-      }
-    }
-  },
-  "organizeImports": {
-    "ignore": ["**/node_modules/*", "**/dist/*"],
-    "enabled": true
-  },
-  "javascript": {
-    "globals": ["Bun"]
-  },
-  "json": {
-    "parser": {
-      "allowComments": true
-    }
-  }
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"files": {
+		"ignore": ["**/dist/*", "**/node_modules/*"],
+		"ignoreUnknown": true
+	},
+	"formatter": {
+		"attributePosition": "auto",
+		"enabled": true,
+		"formatWithErrors": false,
+		"ignore": ["**/dist/*", "**/node_modules/*"],
+		"indentStyle": "tab",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 120
+	},
+	"linter": {
+		"enabled": true,
+		"ignore": ["**/dist/*", "**/node_modules/*"],
+		"rules": {
+			"all": true,
+			"complexity": {
+				"noExcessiveCognitiveComplexity": "off"
+			},
+			"nursery": {
+				"all": true,
+				"noUndeclaredDependencies": "off",
+				"noNodejsModules": "off"
+			},
+			"style": {
+				"noParameterProperties": "off",
+				"useFilenamingConvention": "off",
+				"useNamingConvention": "off"
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true,
+		"ignore": ["**/dist/*", "**/node_modules/*"]
+	},
+	"javascript": {
+		"globals": ["Bun", "JSX"]
+	},
+	"json": {
+		"parser": {
+			"allowComments": true
+		}
+	}
 }

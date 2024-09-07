@@ -1,37 +1,28 @@
 {
-  "name": "@espimarisa/typescript-boilerplate",
-  "version": "0.0.0",
-  "type": "module",
-  "description": "My Bun + TypeScript template.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/espimarisa/bun-template.git"
-  },
-  "homepage": "https://github.com/espimarisa/bun-template#readme",
-  "bugs": {
-    "url": "https://github.com/espimarisa/typescript-boilerplate/issues"
-  },
-  "author": "Espi Marisa <contact@espi.me> (https://espi.me)",
-  "license": "zlib",
-  "private": true,
-  "scripts": {
-    "build": "tsc",
-    "check": "tsc --noEmit",
-    "deps:check": "bunx npm-check-updates --target latest",
-    "deps:update": "bunx npm-check-updates --target latest -u",
-    "dev": "NODE_ENV=development bun run --hot ./src/index.ts",
-    "format": "biome format --write .",
-    "lint": "biome check .",
-    "lint:fix": "biome check --apply .",
-    "start": "NODE_ENV=production bun run ./src/index.ts",
-    "test": "bun run check && bun run lint"
-  },
-  "dependencies": {
-    "tslib": "^2.6.2"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.6.3",
-    "@types/bun": "^1.0.12",
-    "typescript": "^5.4.3"
-  }
+	"name": "@espimarisa/project-name",
+	"version": "0.0.0",
+	"type": "module",
+	"description": "project description",
+	"author": "Espi Marisa <contact@espi.me> (https://espi.me)",
+	"license": "zlib",
+	"private": true,
+	"packageManager": "bun@1.1.26",
+	"scripts": {
+		"check": "tsc --noEmit",
+		"dev": "NODE_ENV=development bun run --hot ./src/index.ts",
+		"lint": "biome check .",
+		"lint:fix": "biome check --apply .",
+		"start": "NODE_ENV=production bun run ./src/index.ts",
+		"test": "bun run check && bun run lint",
+		"format": "biome format --write ."
+	},
+	"dependencies": {
+		"tslib": "^2.7.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"bun-types": "^1.1.26",
+		"typescript": "^5.5.4"
+	},
+	"trustedDependencies": ["@biomejs/biome", "esbuild"]
 }
