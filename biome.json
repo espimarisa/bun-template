@@ -24,8 +24,7 @@
 			},
 			"nursery": {
 				"all": true,
-				"noUndeclaredDependencies": "off",
-				"noNodejsModules": "off"
+				"noUndeclaredDependencies": "off"
 			},
 			"style": {
 				"noParameterProperties": "off",
